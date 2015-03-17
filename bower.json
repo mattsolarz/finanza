@@ -1,0 +1,8 @@
+{
+	"name": "dapple",
+	"version": "0.0.1",
+	"dependencies": {
+		"angular": "~1.3",
+		"angular-material": "latest"
+	}
+}
