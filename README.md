@@ -1,1 +1,5 @@
-Some stuff for a readme.
+# Finanza #
+
+Working directory for Finanza, a money splitting application for house/roommates.
+
+
