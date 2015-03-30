@@ -12,6 +12,9 @@ app.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
 			when('/', {
-				templateUrl: 'views/groups.html',
+				templateUrl: 'views/groupList.html',
+			}).
+			when('/group', {
+				templateUrl: 'views/group.html'
 			});
 	}]);
