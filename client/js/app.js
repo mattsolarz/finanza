@@ -15,13 +15,21 @@ app.config(['$routeProvider',
 			when('/', {
 				templateUrl: 'views/groupList.html',
 			}).
-			when('/group', {
+			when('/group/:groupId', {
 				templateUrl: 'views/group.html'
+			}).
+			otherwise({
+				redirectTo: '/'
 			});
 	}]);
 
-app.controller('GenericController', ['$scope', '$location', function($scope,$location) {
+app.controller('GenericController', ['$scope', '$location', '$routeParams', function($scope, $location, $routeParams) {
 	$scope.go = function(path) {
 		$location.path(path);
 	};
+
+}]);
+
+app.controller('GroupController', ['$scope', '$routeParams', function($scope, $routeParams) {
+	$scope.groupId = $routeParams.groupId;
 }]);

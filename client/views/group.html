@@ -1,10 +1,10 @@
-<div layout="column" layout-fill>
+<div layout="column" layout-fill ng-controller="GroupController">
 	<div layout="row">
 		<div flex>
 			<md-content>
 				<md-toolbar>
 					<h2 class="md-toolbar-tools">
-						<span>Our House</span>
+						<span>Group {{groupId}}</span>
 					</h2>
 				</md-toolbar>
 				<md-tabs md-stretch-tabs="never">
@@ -47,8 +47,10 @@
 									</md-item-content>
 								</md-item>
 							</md-list>
+							<md-button class="md-fab" aria-label="Add button" ng-click="go('/group/0/add')" style="position: absolute; right: 16px; bottom: 16px;">
+								<img ng-src="/img/icons/ic_add_white_48dp.png" height="44px" width="44px"/>
+							</md-button>
 						</section>
-						<md-button class="md-fab"></md-button>
 					</md-tab>
 					<md-tab label="Members">
 						<section>
