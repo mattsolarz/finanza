@@ -6,6 +6,7 @@ var app = angular.module('finanza', [
   $mdThemingProvider.theme('default')
     .primaryPalette('light-blue')
     .accentPalette('red');
+	
 });
 
 app.config(['$routeProvider', 
@@ -18,3 +19,9 @@ app.config(['$routeProvider',
 				templateUrl: 'views/group.html'
 			});
 	}]);
+
+app.controller('GenericController', ['$scope', '$location', function($scope,$location) {
+	$scope.go = function(path) {
+		$location.path(path);
+	};
+}]);
