@@ -18,6 +18,15 @@ app.config(['$routeProvider',
 			when('/group/:groupId', {
 				templateUrl: 'views/group.html'
 			}).
+			when('/group/:groupId/add', {
+				templateUrl: 'views/addExpense.html'
+			}).
+			when('/login', {
+				templateUrl: 'views/login.html'
+			}).
+			when('/register', {
+				templateUrl: 'views/register.html'
+			}).
 			otherwise({
 				redirectTo: '/'
 			});
@@ -33,3 +42,7 @@ app.controller('GenericController', ['$scope', '$location', '$routeParams', func
 app.controller('GroupController', ['$scope', '$routeParams', function($scope, $routeParams) {
 	$scope.groupId = $routeParams.groupId;
 }]);
+
+app.controller('AddExpenseController', ['$scope', '$routeParams', function($scope, $routeParams) {
+	$scope.groupId = $routeParams.groupId;
+}])

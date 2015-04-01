@@ -1,0 +1,40 @@
+<div layout="column" layout-fill ng-controller="AddExpenseController">
+	<div layout="row">
+		<div flex>
+			<md-content>
+				<md-toolbar>
+					<h2 class="md-toolbar-tools">
+						<span>New Payment for {{groupId}}</span>
+					</h2>
+				</md-toolbar>
+				<section layout-margin>
+					<p>Expense details</p>
+					<form>
+						<md-input-container>
+							<label>Expense Name</label>
+							<input type="text">
+						</md-input-container>
+						<md-select>
+							<md-select-label>Category</md-select-label>
+							<md-option>Option 1</md-option>
+							<md-option>Option 2</md-option>
+						</md-select>
+						<md-radio-group>
+							<md-radio-button value="even">
+								Split Evenly
+							</md-radio-button>
+							<md-radio-button value="percent">
+								Split by Percent
+							</md-radio-button>
+							<md-radio-button value="amount">
+								Split by Amount
+							</md-radio-button>
+						</md-radio-group>
+						<md-button type="submit">Add</md-button>
+						<md-button ng-href="#/group/{{groupId}}">Cancel</md-button>
+					</form>
+				</section>
+			</md-content>
+		</div>
+	</div>
+</div>
